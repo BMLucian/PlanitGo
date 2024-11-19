@@ -185,12 +185,140 @@ form button:hover {
     display: none;
 }
 
-/* Footer */
+/* Estilo para el pie de página */
 footer {
     background-color: #004080;
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top: 30px;
+    position: fixed; /* Fija el pie de página */
+    bottom: 0;       /* Lo coloca al final de la página */
+    left: 0;         /* Alineado al borde izquierdo */
+    width: 100%;     /* Ocupa todo el ancho de la página */
     font-size: 0.9rem;
+    display: flex;   /* Usamos flexbox para centrar */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    z-index: 1000;   /* Asegura que esté por encima de otros elementos */
 }
+
+/* Estilo para la imagen del backoffice */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto;    /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para un diseño más atractivo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Estilo para el título del HUB */
+.hub-title {
+    text-align: center; /* Centra el texto */
+    margin: 0px 0; /* Espaciado superior e inferior */
+}
+
+.hub-title h2 {
+    font-size: 1.5rem; /* Tamaño del texto */
+    color: #004080; /* Color principal */
+    font-weight: bold;
+}
+
+.hub-title h2 a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #004080; /* Color del enlace */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.hub-title h2 a:hover {
+    color: #0059b3; /* Cambia el color al pasar el mouse */
+}
+/* Media Queries: Optimización para móviles */
+@media (max-width: 768px) {
+    /* General */
+    body {
+        font-size: 90%; /* Reduce ligeramente el tamaño del texto */
+    }
+
+    .header nav ul {
+        flex-direction: column; /* Cambia el menú de horizontal a vertical */
+        gap: 10px; /* Reduce el espacio entre los enlaces */
+    }
+
+    .header nav ul li {
+        text-align: center; /* Centra los enlaces del menú */
+    }
+
+    /* Contenedor General */
+    .container {
+        padding: 10px; /* Reduce el espacio interno en móviles */
+    }
+
+    /* Caja de Contenido */
+    .box {
+        padding: 10px; /* Ajusta el relleno de las cajas */
+        font-size: 0.9rem; /* Reduce el tamaño del texto dentro de las cajas */
+    }
+
+    /* Imagen del Backoffice */
+    .image-container img {
+        max-width: 90%; /* Reduce el tamaño de la imagen en móviles */
+        margin: 0 auto; /* Centra la imagen */
+        display: block; /* Asegura que ocupe toda la línea */
+    }
+
+    /* Proveedores en Una Columna */
+    .proveedores-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+
+    /* Pie de Página */
+    footer {
+        font-size: 0.8rem; /* Reduce el tamaño del texto en el pie */
+        padding: 8px; /* Ajusta el espacio interno */
+    }
+}
+/* Estilos para el HUB */
+.hub-filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hub-filters select,
+.hub-filters input,
+.hub-filters button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#hub-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#hub-table th,
+#hub-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#hub-table th {
+    background-color: #004080;
+    color: white;
+}
+
+#hub-table tr:hover {
+    background-color: #f1f1f1;
+}
+

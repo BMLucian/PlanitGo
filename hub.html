@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanitGo - HUB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>PlanitGo - HUB</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="comisiones.html">Comisiones</a></li>
+                <li><a href="backoffice.html">ET - Backoffice</a></li>
+                <li><a href="hub.html">HUB</a></li> <!-- Enlace al HUB -->
+                <li><a href="estrategias.html">Estrategias</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <!-- Filtros y Búsqueda -->
+        <div class="hub-filters">
+            <select id="region-filter">
+                <option value="all">Seleccione la Región</option>
+                <option value="AU">AUSTRALIA</option>
+                <option value="EU">EUROPE</option>
+                <option value="LATAM">LATAM</option>
+                <option value="MEX">MEXICO</option>
+                <option value="USA">USA</option>
+            </select>
+            <input type="text" id="search-input" placeholder="Buscar por Proveedor">
+            <button id="clear-filters">Borrar Filtros</button>
+        </div>
+
+        <!-- Tabla de Proveedores -->
+        <table id="hub-table">
+            <thead>
+                <tr>
+                    <th>Proveedor</th>
+                    <th>Producto</th>
+                    <th>Actividad</th>
+                    <th>Comisión</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Proveedores dinámicos aquí -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        Creado por Mihai Lucian
+    </footer>
+    <script src="hub.js"></script>
+</body>
+</html>
