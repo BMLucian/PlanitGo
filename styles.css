@@ -322,3 +322,55 @@ footer {
     background-color: #f1f1f1;
 }
 
+/* Optimización del HUB para móviles */
+@media (max-width: 768px) {
+    /* Filtros */
+    .hub-filters {
+        flex-direction: column; /* Cambia de fila a columna */
+        gap: 15px; /* Más espacio entre elementos */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .hub-filters select,
+    .hub-filters input,
+    .hub-filters button {
+        width: 90%; /* Ocupa casi todo el ancho en móviles */
+        max-width: 400px; /* Máximo ancho */
+    }
+
+    /* Tabla de proveedores */
+    #hub-table {
+        width: 100%; /* Ajusta el ancho a la pantalla */
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+
+    #hub-table thead {
+        display: none; /* Oculta los encabezados en móviles */
+    }
+
+    #hub-table tbody tr {
+        display: block; /* Cada fila se convierte en un bloque */
+        margin-bottom: 15px; /* Espaciado entre filas */
+        border: 1px solid #ddd; /* Añade un borde alrededor */
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 10px; /* Espaciado interno */
+    }
+
+    #hub-table tbody tr td {
+        display: flex; /* Flexbox para alinear elementos */
+        justify-content: space-between; /* Espacio entre el título y el contenido */
+        padding: 5px 0; /* Espaciado vertical */
+        border: none; /* Quita bordes internos */
+    }
+
+    #hub-table tbody tr td:first-child {
+        font-weight: bold; /* Destaca el nombre del proveedor */
+    }
+
+    #hub-table tbody tr td a {
+        color: #004080; /* Mantén el color del enlace */
+        text-decoration: underline; /* Subraya enlaces */
+    }
+}
+
+
