@@ -1,0 +1,146 @@
+/* Estilo General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+.header {
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+    background-color: #0059b3;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2rem;
+    color: #004080;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Contenedor de Cajas Generales */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Caja General */
+.box {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: justify;
+}
+
+.box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.box h2 {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.box a {
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+}
+
+.box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Proveedores (Estilo de Cuadrícula para Dos Columnas) */
+.proveedores-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.proveedor {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proveedor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.proveedor h2 {
+    font-size: 1.3rem;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.proveedor a {
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+}
+
+.proveedor p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
