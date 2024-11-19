@@ -1,20 +1,12 @@
-document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita el envío por defecto del formulario
+document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    // Credenciales correctas
-    const validUsername = "PlanitGo";
-    const validPassword = "Lucian2024";
-
-    if (username === validUsername && password === validPassword) {
-        // Redirige al contenido principal
-        window.location.href = "index.html";
+    if (username === 'PlanitGo' && password === 'Lucian2024') {
+        sessionStorage.setItem('authenticated', true);
+        window.location.href = 'introduccion.html'; // Redirige a la introducción
     } else {
-        // Muestra mensaje de error
-        const errorMessage = document.getElementById("error-message");
-        errorMessage.style.display = "block";
+        document.getElementById('error-message').classList.remove('hidden');
     }
 });
-
